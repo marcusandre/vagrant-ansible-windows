@@ -30,6 +30,10 @@ But that's easy as pie:
     $ ssh-keygen -t rsa -C "your-cool@email.com"
     $ ssh-copy-id ~/.ssh/id_rsa.pub vagrant@192.168.111.222 # pw: vagrant
 
+and then:
+
+    $ ansible all -m ping
+
 If you'd like to use PuTTY on your windows machine you could even convert the %HOMEPATH%\.vagrant.d\insecure_private_key to .ppk with a tool like PuTTYGen and use it in your PuTTY session. Since Vagrant will forward the box ssh port to 2222 (or 2200; just look a the boot prompt) you have to use this port instead of the standard ssh port ```22```.
 
 # License
