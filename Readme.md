@@ -1,5 +1,5 @@
 
-# Vagrant-Ansible-Windows
+# Ansible on Windows
 
 **Ansible and Windows are sitting in a tree and p-r-o-v-i-s-i-o-n-i-n-g!**
 
@@ -7,20 +7,19 @@
 
 Have you ever had to install Ansible on Windows instead of a lovely Linux machine?
 And you'll need to install it if you want to simply ```vagrant up``` with the Ansible provider enabled.
-Let's skip this step and spin up multiple connected virtual machines with the help of *Vagrant*.
-Thereby we can use one instance as the ```[master]``` and the other one as the ```[slave]```.
+Let's skip this step and spin up multiple connected virtual machines. Thereby we can use one instance as the ```[master]``` and the others as the ```[slave]```.
 
 # Dependencies
 
 - [Virtualbox](https://www.virtualbox.org/)
 - [Vagrant](http://www.vagrantup.com/)
-- If it is not possible for you to run 64-Bit boxes, you could easily change the ```Vagrantfile``` to ```"precise32.box"```
+- If it's impossible to run 64-Bit boxes, you could change the ```Vagrantfile``` to ```"precise32.box"```
 
 # Installation
 
     $ git clone https://github.com/meggesje/vagrant-ansible-windows.git
     $ cd vagrant-ansible-windows
-    $ vagrant up [master | slave]
+    $ vagrant up [master|slave]
 
 # License
 
