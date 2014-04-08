@@ -1,4 +1,3 @@
-
 # Ansible on Windows
 
 **Ansible and Windows are sitting in a tree and p-r-o-v-i-s-i-o-n-i-n-g!**
@@ -32,7 +31,7 @@ passwords in your ansible configuration.
 But that's easy as pie:
 
     $ ssh-keygen -t rsa -C "your-cool@email.com"
-    $ ssh-copy-id ~/.ssh/id_rsa.pub vagrant@192.168.111.222 # pw: vagrant
+    $ ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@192.168.111.222 # pw: vagrant
 
 and then:
 
