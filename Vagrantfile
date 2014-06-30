@@ -11,7 +11,6 @@ Vagrant.configure("2") do |config|
       vb.name = "master"
       vb.customize ["modifyvm", :id, "--memory", "512"]
     end
-    # master.vm.synced_folder "provisioning", "/home/vagrant/provisioning"
     master.vm.provision :shell, :path => "buildup.sh"
   end
 
