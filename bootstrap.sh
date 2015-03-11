@@ -16,7 +16,7 @@ if [[ ! -d $ANSIBLE_PATH ]]; then
   apt-get install python-mysqldb python-yaml python-jinja2 python-paramiko sshpass -y
 
   # Checkout the Ansible repository.
-  git clone https://github.com/ansible/ansible.git $ANSIBLE_PATH
+  git clone --recursive https://github.com/ansible/ansible.git $ANSIBLE_PATH
 
   # Copy the `hosts` file to ~
   cp /vagrant/hosts $ANSIBLE_HOSTS
@@ -26,5 +26,7 @@ if [[ ! -d $ANSIBLE_PATH ]]; then
   echo "source $ANSIBLE_PATH/hacking/env-setup" >> $VAGRANT_PATH/.bashrc
   echo "export ANSIBLE_HOSTS=$ANSIBLE_HOSTS" >> $VAGRANT_PATH/.bashrc
 fi
+
+chown -R vagrant:vagrant $ANSIBLE_PATH
 
 echo "Done."
