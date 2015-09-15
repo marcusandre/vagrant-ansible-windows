@@ -8,7 +8,7 @@ ANSIBLE_HOSTS=$VAGRANT_PATH/.ansible_hosts
 apt-get update -qq
 
 # Install some tools.
-apt-get install make git-core vim-nox tmux -y
+apt-get install make git-core -y
 
 # Check if the Ansible repository exists.
 if [[ ! -d $ANSIBLE_PATH ]]; then

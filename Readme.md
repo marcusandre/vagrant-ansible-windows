@@ -9,7 +9,7 @@
   machine? And you'll need to install it if you want to simply ```vagrant up```
   with the Ansible provider enabled. Let's skip this step and spin up multiple
   connected virtual machines. Thereby we can use one instance as the
-  ```[master]``` and the others as the ```[slave]```.
+  ```[primary]``` and the others as the ```[secondary]```.
 
 ## Dependencies
 
@@ -21,7 +21,7 @@
 
     $ git clone https://github.com/meggesje/vagrant-ansible-windows.git
     $ cd vagrant-ansible-windows
-    $ vagrant up [master|slave]
+    $ vagrant up [primary|secondary]
 
 ## SSH
 
